@@ -1,66 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TomTom</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #110f31;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 8px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-    .project {
-      background: #fff;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin: 3rem 0 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>TomTom</title>
+    <style>
+        .sign-container {
+            width: 250px;           /* The "sign" width */
+            height: 40px;
+            margin: 50px auto;           /* Height of the sign */
+            overflow: hidden;       /* Hide overflowing text */
+            background: #171935;       /* Background color */
+            color: rgb(255, 255, 255);            /* Text color */
+            font-family: "Pixelify Sans";
+            border: 2px solid rgb(255, 255, 255);
+            position: relative;
+        }
+
+        .scroll-text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 2rem;
+            animation: scroll-left 2s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                left: 0%;
+            }
+            100% {
+                left: -60%;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fade 2s ease forwards;
+        }
+
+        @keyframes fade {
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: "Pixelify Sans";
+            margin: 0;
+            padding: 0;
+            background: #171935;
+            color: #ffffff;
+            opacity: 0;
+            animation: fade 2s ease forwards;
+        }
+        header {
+            background: #110f31;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            border-bottom: 8px solid #ccc;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+        .project {
+            background: #97a8b8;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+            margin: 1.5rem 0 0rem;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>TomTom</h1>
-    <p>• Programmer •</p>
-  </header>
+    <header>
+        <h1 style="margin: 1rem;">TomTom</h1>
+        <p style="margin-top: 0rem;">• Programmer •</p>
+    </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>Hi! I'm a programmer who making games using pygame-ce.</p>
-    </section>
+    <main>
+        <section>
+            <p style="text-align: center;font-size: 3rem;margin: 0rem;">A python programmer slowly improving every day since 2021</p>
+            <h2 style="margin-top: 1rem;"></h2>
+            <div class="sign-container" style="margin-bottom: 1rem;">
+                <div class="scroll-text">
+                About me About me About me
+                </div>
+            </div>
+            <p style="font-size: 2rem; text-align: center;padding: 0rem;margin-top: 1rem;">Skills:</p>
+            <p style="text-align: center;font-size: 1.2rem;">python</p>
+            <p style="text-align: center;font-size: 1.2rem;">pygame-ce</p>
+            <p style="text-align: center;font-size: 1.2rem;">discord.py</p>
+            <p style="text-align: center;font-size: 1.2rem;">pymunk</p>
+            <p style="text-align: center;font-size: 1.2rem;">pickle</p>
+            <p style="text-align: center;font-size: 1.2rem;">ursina</p>
+            <p style="text-align: center;font-size: 1.2rem;">And many more libs...</p>
+        </section>
+    <main>
 
-  <footer>
-    &copy; 2025 TomTom
-  </footer>
+    <footer>
+        &copy; 2025 TomTom
+    </footer>
 
 </body>
 </html>
